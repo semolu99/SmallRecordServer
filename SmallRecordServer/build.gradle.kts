@@ -28,6 +28,10 @@ dependencies {//의존성 관리
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    implementation("org.springframework:spring-webflux")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+
+
 }
 
 allOpen {//기본 적으로 오픈 되지 않은 annotation 추가

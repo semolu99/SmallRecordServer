@@ -29,3 +29,4 @@ logging:
         type.descriptor.sql: trace
         SQL: debug
 #        type.descriptor.sql에 디버그하면 jpa에서 실행된 sql이 로그에 찍혀나온다
+REST_API_KEY: "1fe773f171112c83401bda1ad15436d3"
