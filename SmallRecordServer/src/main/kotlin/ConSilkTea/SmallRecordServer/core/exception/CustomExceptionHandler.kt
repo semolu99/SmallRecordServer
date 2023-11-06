@@ -27,5 +27,4 @@ class CustomExceptionHandler {
         }
         return ResponseEntity(errors, HttpStatus.BAD_REQUEST)
     }
-
 }
