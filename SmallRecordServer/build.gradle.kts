@@ -29,6 +29,27 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework:spring-webflux")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    dependencies {
+        implementation("io.ktor:ktor-server-core:1.6.4") // Core features for Ktor
+        implementation("io.ktor:ktor-server-netty:1.6.4") // Netty as the engine for Ktor
+
+        implementation("io.ktor:ktor-features:1.6.4") // Additional features for Ktor
+
+        // For Content Negotiation with Jackson
+        implementation("io.ktor:ktor-jackson:1.6.4")
+
+        // For WebSockets
+        implementation("io.ktor:ktor-websockets:1.6.4")
+
+        // For Status Pages
+        implementation("io.ktor:ktor-http:1.6.4")
+
+        // For Duration class (used in your example)
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.21")
+        implementation("io.ktor:ktor-websockets:1.6.4")
+        implementation ("org.jetbrains.kotlinx:kotlinx-serialization-json:1.2.2")
+    }
+
 }
 
 allOpen {
