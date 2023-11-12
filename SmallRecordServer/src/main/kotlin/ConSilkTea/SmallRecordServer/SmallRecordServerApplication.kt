@@ -55,8 +55,23 @@ class EchoServer(private val port: Int) {
         while (true) {
             val message = reader.readLine() ?: break
             val messageJson = Json.decodeFromString<JsonObject>(message)
-            println(messageJson["messageType"].toString())
-            println(messageJson["barcodeNum"].toString())
+            val pureMessageJson = messageJson["messageType"].toString().replace("\"", "")
+            if(pureMessageJson == "barcodeNum"){
+                println("바코드 번호입니다.")
+                println(messageJson)
+                println(messageJson["messageType"].toString())
+                println(messageJson["barcodeNum"].toString())
+            }
+            else if(pureMessageJson == "communityWrite"){
+                println("게시글 생성입니다.")
+                println(messageJson)
+                println(messageJson["messageType"].toString())
+                println(messageJson["title"].toString())
+                println(messageJson["content"].toString())
+            }
+
+
+
 
 
 
