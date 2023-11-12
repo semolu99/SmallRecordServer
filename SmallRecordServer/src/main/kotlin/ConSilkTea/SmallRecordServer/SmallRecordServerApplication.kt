@@ -19,6 +19,7 @@ import java.net.Socket
 import java.util.concurrent.Executors
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonObject
 
 
 @SpringBootApplication
@@ -53,9 +54,9 @@ class EchoServer(private val port: Int) {
 
         while (true) {
             val message = reader.readLine() ?: break
-
-            println(message)
-
+            val messageJson = Json.decodeFromString<JsonObject>(message)
+            println(messageJson["messageType"].toString())
+            println(messageJson["barcodeNum"].toString())
 
 
 
