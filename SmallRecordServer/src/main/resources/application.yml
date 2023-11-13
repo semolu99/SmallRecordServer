@@ -5,6 +5,7 @@ server:
     encoding:
       charset: UTF-8
       force: true
+      enabled: true
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -20,6 +21,7 @@ spring:
         format_sql: true
         show_sql: false
         highlight_sql: true
+    open-in-view: true
 logging:
   pattern:
     console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n"
@@ -30,3 +32,5 @@ logging:
         SQL: debug
 #        type.descriptor.sql에 디버그하면 jpa에서 실행된 sql이 로그에 찍혀나온다
 REST_API_KEY: "1fe773f171112c83401bda1ad15436d3"
+jwt:
+  secret: DadFufN4Oui8Bfv3ScFj6R9fyJ9hD45E6AGFsXgFsRhT4YSdSb

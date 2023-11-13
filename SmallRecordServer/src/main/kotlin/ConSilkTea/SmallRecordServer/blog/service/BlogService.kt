@@ -3,7 +3,6 @@ package ConSilkTea.SmallRecordServer.blog.service
 import ConSilkTea.SmallRecordServer.blog.dto.BlogDto
 import ConSilkTea.SmallRecordServer.blog.entity.WordCount
 import ConSilkTea.SmallRecordServer.blog.repository.WordRepository
-import ConSilkTea.SmallRecordServer.core.exception.InvalidInputException
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpHeaders
 import org.springframework.http.MediaType

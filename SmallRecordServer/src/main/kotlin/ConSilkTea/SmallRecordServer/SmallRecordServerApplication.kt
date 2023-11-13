@@ -59,10 +59,8 @@ class EchoServer(private val port: Int) {
             println(messageJson["barcodeNum"].toString())
 
 
-
-
             // Echo the message back to the client
-          //  writer.println("Server response: $message")
+            //  writer.println("Server response: $message")
         }
 
         println("Client disconnected: ${clientSocket.inetAddress.hostAddress}")
