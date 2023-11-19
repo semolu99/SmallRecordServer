@@ -1,5 +1,7 @@
 package ConSilkTea.SmallRecordServer.community.dto
 
+import ConSilkTea.SmallRecordServer.community.entity.Board
+import ConSilkTea.SmallRecordServer.community.entity.Comment
 import com.fasterxml.jackson.annotation.JsonProperty
 import jakarta.validation.constraints.NotBlank
 import java.time.LocalDate
@@ -49,4 +51,23 @@ data class BoardDtoResponse(
     val title: String,
     val content: String,
     val date: String
+)
+
+data class CommentDto(
+    val id: Long,
+    val comment: String,
+) {
+    companion object {
+        fun toDto(comment: Comment): CommentDto {
+            return CommentDto(
+                comment.id!!,
+                comment.comment!!,
+            )
+        }
+    }
+}
+
+data class CommentResponse(
+    val id: Long,
+    val comment: String,
 )
