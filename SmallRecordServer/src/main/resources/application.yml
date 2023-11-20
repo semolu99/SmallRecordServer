@@ -9,12 +9,12 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/study?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/smallrecorddb?serverTimezone=Asia/Seoul
     username: root
     password: Goldchzh95107429!
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
