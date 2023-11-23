@@ -13,3 +13,9 @@ enum class ResultCode(val msg: String) {
 enum class ROLE {
     MEMBER
 }
+
+enum class Activity(val type: String) {
+    EAT("밥"),
+    BOWEL("배변"),
+    SLEEP("잠"),
+}
